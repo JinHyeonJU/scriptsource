@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function3</title>
+  </head>
+  <body>
+    <script>
+      function add(a, b, c, d) {
+        c = c || 10;
+        d = d || 273; // d값안주면 273으로 default설정
+
+        return a + b + c + d;
+      }
+      //return 했으니 let sum으로 담기
+      let sum = add(3, 5);
+      document.write(sum);
+    </script>
+  </body>
+</html>

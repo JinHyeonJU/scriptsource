@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #result{
+        color: red;
+        margin: 0;
+        font-size: 14px ;
+    }
+</style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="name" onfocus="inputClear()">
+        <input type="button" value="보내기" onclick="nameCheck()">
+        <p id="result"></p>
+    </form>
+    <script>
+        let result =document.querySelector("#result");
+        let name = document.querySelector("[name='name']");
+        function inputClear(){
+            tel.select();
+            //포커스를 주면 하단에 나왔던 검증 메세지 없애기
+            result.style.display="none"; //제일 간단
+
+        }
+        function nameCheck(){
+            //정규식 패턴 생성
+            let reg = /[가-힣]{2,4}$/;
+            
+            // console.log(reg.test(tel));
+            if(!reg.test(name.value)){//패턴과 일치하지 않는다면
+                result.style.display="block";
+                result.innerHTML="이름을 확인해주세요.";
+            }
+        }
+    </script>
+</body>
+</html>

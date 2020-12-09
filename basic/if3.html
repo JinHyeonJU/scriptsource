@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //사용자에게 국어,영어,수학 점수를 입력받아 평균을 구한 뒤 A,B,C,D,E 등급 출력하기
+      let lng = prompt("국어 점수 : ");
+      let eng = prompt("영어 점수 : ");
+      let math = prompt("수학 점수 : ");
+
+      let sum = (lng + eng + math) / 3;
+
+      if (sum >= 90) {
+        document.write("평균 점수 : A");
+      } else if (sum >= 80) {
+        document.write("평균 점수 : B");
+      } else if (sum >= 70) {
+        document.write("평균 점수 : C");
+      } else if (sum >= 60) {
+        document.write("평균 점수 : D");
+      } else {
+        document.write("평균 점수 : E");
+      }
+    </script>
+  </body>
+</html>

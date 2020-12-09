@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object1</title>
+  </head>
+  <body>
+    <script>
+      //사용자 정의객체
+      let student = {
+        name: "홍길동",
+        kor: 92,
+        math: 98,
+        eng: 96,
+        sci: 98,
+      };
+      //   document.write("이름 : " + student.name + "<br>");
+      //   document.write("영어 점수 : " + student.eng + "<br>");
+      //   document.write("수학 점수 " + student.math + "<br>");
+      //   document.write("국어 점수 : " + student.kor + "<br>");
+      //   document.write("과학 점수 : " + student.sci + "<br>");
+
+      let output = "";
+      for (key in student) {
+        // key : kor,math
+        output += key + ":" + student[key] + "<br>";
+      } // 변수[key] : 변수의 값들을 가져옴
+      document.write(output);
+    </script>
+  </body>
+</html>

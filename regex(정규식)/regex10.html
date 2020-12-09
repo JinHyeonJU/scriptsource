@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //캡쳐링 된 값이 어떻게 쓰이는지? - 저장한 값을 쉽게 바꿀 수 있다. replace 등등
+        let reg = /(\w+)\s(\w+)/; //\s는 기억하지 않는 값
+        let str = "John Smith";
+        console.log("==== match ====");
+        console.log(str.match(reg));
+        console.log();
+        let newstr = str.replace(reg, "$2, $1"); //결과 smith  와 john의 위치를 바꿈 -  array 값에서 1번 값과 2번값을 서로 바꿈
+        console.log(newstr);
+    </script>
+</body>
+</html>

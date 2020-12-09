@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ko = "kokokoko";
+        const kooo = "koookoookooo";
+
+        console.log(ko.match(/ko+/));
+        console.log(kooo.match(/ko+/));
+
+        //캡쳐링
+        console.log("");
+        console.log(ko.match(/(ko)+/));
+        console.log(kooo.match(/(ko)+/));
+        //콘솔창에서 0번 자리는 찾은 것 1번 자리는 캡쳐링해서 보관하고 있는것
+        //두번째 ""에 있는 값은 캡쳐링 값 - 변경 가능
+        //캡쳐링 - 기억하고 있는 값 
+    </script>
+</body>
+</html>

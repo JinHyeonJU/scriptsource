@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정규식2</title>
+  </head>
+  <body>
+    <p>
+      Lorem, Ipsum dolor sit amet consectetur adipisicing elit. Et, deleniti
+      ab.<br />
+      Amet cupiditate, nemo nisi quidem mollitia tenetur, culpa magni adipisci
+      velit magnam repellendus voluptate vero, delectus recusandae vitae iste.
+    </p>
+    <script>
+      //원본 문자열 가져오기
+      let p1 = document.querySelector("p").innerText; //p안의 내용
+
+      console.log("i플래그사용");
+      console.log(p1.match(/ipsum/i));
+      console.log("");
+
+      console.log("ig 플래그사용");
+      console.log(p1.match(/ipsum/gi));
+      console.log("");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get"">
+      <div>
+        <label for="username">이름 : </label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="username"
+        />
+      </div>
+      <div>
+        <label for="password">비밀번호 : </label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+        />
+      </div>
+      <div>
+        <label for="age">나이 : </label>
+        <input type="text" name="age" id="age" placeholder="age" />
+      </div>
+      <div>
+        <input type="button" value="전송" onclick="checkForm()" />
+      </div>
+    </form>
+    <script>
+      function checkForm() {
+        //이름, 비밀번호, 나이를 가져온 후 내용이 없는 경우 해당 요소에
+        //값을 입력할 수 있도록 포커스 지정
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var age = document.getElementById("age");
+
+        //경고창 띄우기
+        //포커스 맞추기
+        //return false; => 차례로 검증하는 느낌
+        if (username.value == "") {
+          alert("username을 입력하세요");
+          username.focus();
+          return false;
+        } else if (password.value == "") {
+          alert("password를 입력하세요");
+          password.focus();
+          return false;
+        } else if (age.value == "") {
+          alert("age를 입력하세요");
+          age.focus();
+          return false;
+        }
+
+        // 폼 전송 => submit()
+        document.querySelector("form").submit();
+      }
+    </script>
+  </body>
+</html>

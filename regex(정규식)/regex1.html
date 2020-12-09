@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자주쓰는 정규식1</title>
+  </head>
+  <body>
+    <div>
+      <h4>정규 포현식과 일치하는 문자열 리턴 - exec</h4>
+      <p id="exec"></p>
+    </div>
+    <div>
+      <h4>정규 포현식과 일치하는 문자열 있으면 true, 없으면 false 리턴 - test</h4>
+      <p id="test"></p>
+    </div>
+    <div>
+      <h4>정규 포현식과 일치하는 부분 리턴 - match</h4>
+      <p id="match"></p>
+    </div>
+    <div>
+      <h4>정규 포현식과 위치 리턴 - search</h4>
+      <p id="search"></p>
+    </div>
+    <script>
+      //정규식(패턴) 생성 1 - new RegExp() /
+      //const reg = new RegExp("Ajax");
+
+      //정규식(패턴) 생성 2 - /패턴/
+      const reg = /Ajax/;
+
+      //원본문자열
+      const str = "Javascript jQuery Ajax";
+    
+    document.getElementById("exec").innerText = reg.exec(str);
+    document.getElementById("test").innerText = reg.test(str);
+    document.getElementById("match").innerText = str.match(reg);
+    document.getElementById("search").innerText = str.search(reg);
+
+
+
+    </script>
+    </script>
+</script>
+</script>
+  </body>
+</html>
